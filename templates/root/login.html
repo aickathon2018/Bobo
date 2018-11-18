@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Staff Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='root/css/login.css') }}">
+</head>
+<body>
+    <main>
+        <div class='container'>
+            <h1 class="text-container">User Login</h1>
+            <form action="" method="post" id="loginform">
+                <label for="username" class="text-container">Username:</label>
+                <input type="text" placeholder="Please enter your username" name="username" id="username"/>
+                <label for="password" class="text-container">Password:</label>
+                <input type="password" placeholder="Please enter your password" name="password" id="password"/>
+            </form>
+            <button id="submit_button" type="submit" form="loginform" value="submit">
+                    <div class="text-container"><b>Submit</b></div>
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="303.64851485148506 241.69306930693062 27.35148514851494 28" width="15" height="15">
+                        <defs>
+                            <path d="M316 242.69L313.17 245.52L322.34 254.69L313.17 263.86L316 266.69L328 254.69L316 242.69Z" id="a1U5wfm31"></path>
+                            <path d="M305.15 254.69L322.97 254.69" id="cp5ofzRry"></path>
+                        </defs>
+                        <g>
+                            <g>
+                                <use xlink:href="#a1U5wfm31" opacity="1" fill="#000000" fill-opacity="1"></use>
+                                <g>
+                                    <use xlink:href="#a1U5wfm31" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="0"></use>
+                                </g>
+                            </g>
+                            <g>
+                                <g>
+                                    <use xlink:href="#cp5ofzRry" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="3" stroke-opacity="1"></use>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+            </button>
+            <a href="http://localhost:5000/register">Go to register</a>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='root/js/login.js') }}"></script>
+</body>
+</html>

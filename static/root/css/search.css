@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins|Playfair+Display|Libre+Baskerville');
+html, body{height: 100vh; height:100%; width:100%; padding:0; margin:0;}
+
+*:focus{
+    outline: none;
+}
+
+main{
+    display:flex;
+    padding:0;
+    background: #bd9d85;
+    background-size: contain;
+    background-repeat:   no-repeat;
+    background-position: center center;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+.text-container{
+    -moz-user-select: none; 
+    -webkit-user-select: none; 
+    -ms-user-select:none; 
+    user-select:none;
+    -o-user-select:none;
+}
+
+div.container{
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    max-width: 500px;
+    max-height: 1000px;
+    box-sizing: border-box;
+    align-items: center;    
+}
+
+h1{
+    font-family: 'Libre Baskerville', serif;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+
+form > *{
+    margin: 5px;
+    max-width: 500px;
+    width: 100%;
+}
+
+label{
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+}
+
+input{
+    font-family: 'Poppins', sans-serif;
+    padding: 5px;
+    background: white;
+    border: 1px solid;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+input:focus{
+    color: black;
+    border-color: #6fd19a;
+    box-shadow: 0px 0px 0px 3px #6fd19a;
+}
+
+select{
+    font-family: 'Poppins', sans-serif;
+    padding: 5px;
+    background: white;
+    border: 1px solid;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+select:focus{
+    color: black;
+    border-color: #6fd19a;
+    box-shadow: 0px 0px 0px 3px #6fd19a;
+}
+
+button{
+    margin: 5px;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 25px;
+    padding: 5px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    max-width: 100px;
+    border: 2px solid;
+    border-radius: 40px;
+    background: #7bb695;
+    color: black;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+}
+
+svg{
+    margin-top: 2px;
+}
+
+button div{
+    box-sizing: border-box;
+    position: relative;
+    max-width: 100px;
+    max-height: 15px;
+    text-align: center;
+    margin-bottom: 3px;
+}
+
+#suggest[class="on"]{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: lavenderblush;
+    position: fixed;
+    width: 80vw;
+    height: 80vh;
+    top: 10vh;
+    left: 10vw;
+}
+
+#suggest[class="off"]{
+    visibility: none;
+    position: fixed;
+    width: 0;
+    height: 0;
+}
+
+@media only screen and (min-width: 500px){
+
+    input:hover{
+        color: black;
+        border-color: #7bb695;
+        box-shadow: 0px 0px 0px 1px #7bb695;
+    }
+
+    input:focus{
+        color: black;
+        border-color: #6fd19a;
+        box-shadow: 0px 0px 0px 3px #6fd19a;
+    }
+
+    select:hover{
+        color: black;
+        border-color: #7bb695;
+        box-shadow: 0px 0px 0px 1px #7bb695;
+    }
+
+    select:focus{
+        color: black;
+        border-color: #6fd19a;
+        box-shadow: 0px 0px 0px 3px #6fd19a;
+    }
+
+    button{
+        margin: 5px;
+        max-width: 500px;
+        width: 100%;
+        font-family: 'Poppins', sans-serif;
+        margin-top: 25px;
+        padding: 5px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        max-width: 35px;
+        border: 2px solid;
+        border-radius: 40px;
+        background: #7bb695;
+        color: black;
+        display: flex;
+        justify-content: space-around;
+        align-content: center;
+    }
+
+    button:hover{
+        animation-name: button_shrink;
+        animation-duration: 0.2s;
+        animation-fill-mode: forwards;
+        animation-timing-function: linear;
+        animation-direction: alternate;
+        content: "";
+    }
+
+    button:hover svg{
+        margin-top: 2px;
+    }
+
+    #scan:hover{
+        animation: none;
+        background-color: aquamarine;
+    }
+
+    #scan{
+        max-width: 100px;
+    }
+
+    #cp5ofzRry{
+        visibility: hidden;
+    }
+
+    button:hover #cp5ofzRry{
+        visibility: visible;
+        animation: fade_in 0.2s linear alternate forwards;
+    }
+
+    button div{
+        box-sizing: border-box;
+        position: relative;
+        max-width: 0px;
+        max-height: 0px;
+        visibility: hidden;
+        display: none;
+        text-align: center;
+        margin-bottom: 3px;
+    }
+
+    button:hover div{
+        display: block;
+        visibility: visible;
+        max-width: 100px;
+        max-height: 15px;
+        animation: fade_in 0.2s linear alternate forwards;
+    }
+}
+
+#suggest button:hover{
+    animation: none;
+}
+
+#suggest #close{
+    align-self: flex-end;
+    border: none;
+    margin: 5px;
+    padding: 0px;
+    background-color: transparent;
+}
+
+#suggest #close:hover{
+    cursor: pointer;
+}
+
+#suggest #snap{
+    max-width: 100px;
+    max-height: 50px;
+    display: block;
+}
+
+#suggest canvas[class="off"]{
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+#suggest canvas[class="on"]{
+    visibility: visible;
+    width: auto;
+    height: auto;
+}
+
+#suggest video[class="off"]{
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+#suggest video[class="on"]{
+    visibility: visible;
+    width: auto;
+    height: auto;
+}
+
+#snap:hover{
+    animation: none;
+    background-color: aquamarine;
+}
+
+/***Keyframes***/
+@keyframes button_shrink{
+    from{}
+    to{max-width: 100px;}
+
+}
+
+@keyframes fade_in{
+    from{opacity: 0; visibility: hidden;}
+    to{opacity: 1; visibility: visible;}
+}

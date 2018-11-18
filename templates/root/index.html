@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Main Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='root/css/main.css') }}" />
+</head>
+<body>
+    <header>
+        <a>
+            <img src="{{url_for('static', filename='root/img/search.png')}}" alt="search">
+        </a>
+        <a href="http://localhost:5000/" id="logo">Fashion</a>
+        <a href="http://localhost:5000/login"><button id="sign_in_up">Login/Register</button></a>
+    </header>
+    <!--   
+        Slider styling code 
+        Author: zuraiz
+        Source: https://codepen.io/zuraizm/pen/vGDHl/
+    -->
+    <div>
+        <div id="slider">
+            <a href="#" class="control_next">>></a>
+            <a href="#" class="control_prev"><<</a>
+            <ul>
+                <li style="background-color: rosybrown;">SLIDE 1</li>
+                <li style="background-color: goldenrod;">SLIDE 2</li>
+                <li style="background-color: lemonchiffon;">SLIDE 3</li>
+                <li style="background-color: sandybrown;">SLIDE 4</li>
+            </ul>  
+        </div>
+    </div>
+    <nav style="z-index: 999;">
+        <button id="nav" class="nav-button"><img src="{{url_for('static', filename='root/img/list.png')}}" alt="nav"/></button>
+        <div id="nav-item" class="off">
+            <a href="#"><button id="account" class="nav-button"><img src="{{url_for('static', filename='root/img/grandfather.png')}}" alt="nav"/></button></a>
+            <a href="#"><button id="cart" class="nav-button"><img src="{{url_for('static', filename='root/img/shopping-cart.png')}}" alt="nav"/></button></a>
+            <a href="http://localhost:5000/search"><button id="search" class="nav-button"><img src="{{url_for('static', filename='root/img/search-white.png')}}" alt="nav"/></button></a>
+            <a href="#"><button id="search-cat" class="nav-button"><img src="{{url_for('static', filename='root/img/filter.png')}}" alt="nav"/></button></a>
+            <a href="#"><button id="cs" class="nav-button"><img src="{{url_for('static', filename='root/img/support.png')}}" alt="nav"/></button></a>
+        </div>
+    </nav>
+    <main>
+        <div class='banner'>
+            <div class="banner_title">Favorite Items</div>
+            <div id="tracking items" class="items">
+                <a><img src="{{url_for('static', filename='root/img/dress1.jpg')}}" alt="item1"/></a>
+                <a><img src="{{url_for('static', filename='root/img/dress2.jpg')}}" alt="item2"/></a>
+            </div>
+        </div>
+        <div class='banner'>
+            <div class="banner_title">What's Hot</div>
+            <div id="sales" class="items">
+                <img src="{{url_for('static', filename='root/img/dress1.jpg')}}" alt="item1"/>
+                <img src="{{url_for('static', filename='root/img/dress2.jpg')}}" alt="item2"/>
+            </div>
+        </div>
+    </main>
+    <footer>
+        #####Footer#####
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='root/js/main.js') }}"></script>
+</body>
+</html>

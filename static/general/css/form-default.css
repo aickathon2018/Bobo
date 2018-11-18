@@ -1,0 +1,146 @@
+/*Author: Lim Wei Sean*/
+
+html, body{
+    padding: 0px;
+    margin: 0px;
+    width: 99vw;
+    min-height: 99vh;
+    box-sizing: border-box;
+}
+
+.container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.format-flex-vertical{
+    max-width: 700px;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-height: 100%;
+}
+
+.format-flex-horizontal{
+    max-width: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    align-items: stretch;
+    justify-content: center;
+    width: 100%;
+    max-height: 100%;
+}
+
+.format-flex-horizontal > * {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.format-flex-horizontal > *:not(label){
+    min-width: 100px;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.format-flex-horizontal label{
+    min-width: 100px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.format-flex-vertical > *{
+    min-width: 100px;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.format-flex-vertical label{
+    text-align: center;
+}
+
+@media only screen and (min-width: 500px){
+
+    .format-flex-horizontal > *:not(label){
+        min-width: 100px;
+        flex-basis: 3px;
+        flex-grow: 1;
+        margin-bottom: 5px;
+    }
+
+    .format-flex-horizontal label{
+        min-width: 100px;
+        flex-basis: 1px;
+        margin-bottom: 5px;
+    }
+
+
+    .format-flex-vertical > *{
+        min-width: 100px;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .format-flex-vertical label{
+        text-align: left;
+    }
+}
+
+fieldset{
+   border: 0; 
+}
+
+.format-flex-vertical legend{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+div .form-title{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 5px;
+}
+
+button {
+    font-weight: bold;
+    color: black !important;
+    max-width: 100px !important;
+    padding: 5px !important;
+    border: black 3px solid;
+    border-radius: 20px !important;
+    background: transparent !important;
+}
+
+button:hover{
+    border: grey 3px solid;
+    background: black !important;
+    color: white !important;
+    animation: buttonfade 0.5s linear forwards !important;
+}
+
+@keyframes buttonfade{
+    from{
+        border: black 3px solid; 
+        background: transparent; 
+        color: black;
+    }
+    to{
+        border: grey 3px solid;
+        background: black !important;
+        color: white !important;
+    }
+}

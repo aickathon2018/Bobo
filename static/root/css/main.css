@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico|Poppins');	
+
+html {
+    background: lavender;
+  }
+  
+html, body {
+    margin: 0;
+    padding: 0;
+    height:100%;
+    width:100%;
+}
+
+body > *{
+    margin: 5px;
+}
+
+button{
+    height: 40px;
+    width: 100px;
+    border-radius: 15px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+}
+
+/********************************************
+Slider styling code 
+Author: zuraiz
+Source: https://codepen.io/zuraizm/pen/vGDHl/
+********************************************/
+
+#slider {
+  position: relative;
+  overflow: hidden;
+  margin: 20px auto 0 auto;
+  border-radius: 4px;
+}
+
+#slider ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 200px;
+  list-style: none;
+}
+
+#slider ul li {
+  position: relative;
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 1300px;
+  height: 380px;
+  background: #ccc;
+  text-align: center;
+  line-height: 350px;
+}
+
+a.control_prev, a.control_next {
+  position: absolute;
+  top: 35%;
+  z-index: 500;
+  display: block;
+  padding: 4% 3%;
+  width: auto;
+  height: auto;
+  background: #2a2a2a;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+a.control_prev:hover, a.control_next:hover {
+  opacity: 1;
+  -webkit-transition: all 0.2s ease;
+}
+
+a.control_prev {
+  border-radius: 0 2px 2px 0;
+}
+
+a.control_next {
+  right: 0;
+  border-radius: 2px 0 0 2px;
+}
+
+.slider_option {
+  position: relative;
+  margin: 10px auto;
+  width: 160px;
+  font-size: 18px;
+}
+/**********************************************************************************************************/
+
+/*****************************************Header*********************************************/
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+header #logo{
+    text-decoration: none;
+    font-family: 'Pacifico', cursive;
+    font-size: 30px;
+}
+
+header img{
+    padding: 5px;
+    height: 30px;
+    width: 30px;
+}
+
+/*****************************************Nav*********************************************/
+
+nav{
+    position: fixed;
+    width: 70px;
+    height: 70px;
+}
+.nav-button{
+    background-color: rgb(238, 98, 43);
+    position: fixed;
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    border: 5px;
+    border-style: solid;
+    border-color: orange;
+    right: 50px;
+    bottom: 50px;
+    z-index: 999;
+}
+
+.off > *{
+    visibility: hidden;
+}
+
+#nav-item button img{
+    max-width: 40px;
+    max-height: 40px;
+}
+
+.off{
+    position: relative;
+}
+
+.on #account{
+    bottom: 125px;
+}
+.on #cart{
+    bottom: 200px;
+}
+.on #search{
+    bottom: 275px;
+}
+.on #search-cat{
+    bottom: 350px;
+}
+.on #cs{
+    bottom: 425px;
+}
+/*****************************************Main*********************************************/
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main > *{
+    margin: 10px;
+}
+
+.banner{
+    width: 90vw;
+    background-color: rgb(244, 230, 250);
+    border: 3px;
+    border-style: dashed;
+}
+
+.banner_title{
+    font-size: 20px;
+    width: 50%;
+    background-color: rgb(224, 28, 28);
+    color: white;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    padding-left: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.items{
+    display: flex;
+    padding: 5px;
+}
+
+.items > *{
+    margin: 5px;
+}
+
+.items img{
+    max-height: 150px;
+}
